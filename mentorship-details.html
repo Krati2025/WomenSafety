@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Program - Registration</title>
+    <link rel="stylesheet" href="mentor.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#safety">Safety Features</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mentorship-details">
+            <div class="container">
+                <h2 class="center-text">Mentorship Program</h2>
+                <div class="mentorship-info">
+                    <p>Our Mentorship Program connects experienced mentors with women who want guidance in their personal and professional lives. The program is designed to empower women, build confidence, and provide valuable resources and advice to help them navigate challenges.</p>
+
+                    <h3>Program Benefits:</h3>
+                    <ul>
+                        <li>One-on-one mentoring with experienced professionals</li>
+                        <li>Career advice and skill development</li>
+                        <li>Networking opportunities</li>
+                        <li>Emotional support and empowerment</li>
+                    </ul>
+
+                    <h3>How to Register:</h3>
+                    <p>Fill out the form below to register for the Mentorship Program. We will review your application and connect you with a mentor based on your interests and goals.</p>
+                </div>
+
+                <div id="registration-form" class="form-container">
+                    <h3 class="center-text">Register Now</h3>
+                    <form id="registrationForm" action="/submit-mentorship-registration" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required aria-label="Full Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required aria-label="Email Address">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="interests">Your Interests</label>
+                            <textarea id="interests" name="interests" rows="4" required aria-label="Your Interests"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals">What are your goals for the mentorship?</label>
+                            <textarea id="goals" name="goals" rows="4" required aria-label="Goals for Mentorship"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Women Safety & Empowerment</p>
+    </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+            event.preventDefault();  
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch('/submit-mentorship-registration', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        name: formData.get('name'),
+                        email: formData.get('email'),
+                        interests: formData.get('interests'),
+                        goals: formData.get('goals'),
+                    }),
+                });
+
+                const result = await response.text(); 
+                alert(result);  
+                this.reset();  
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>

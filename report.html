@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report an Issue - Women Safety & Empowerment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="helpline.html">24/7 Helpline</a></li>
+                <li><a href="forums.html">Forums</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="safety.html">Safety Features</a></li>
+            </ul>
+            <button class="btn" id="donate-btn">Donate Now</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="report-form">
+            <h2>Report an Issue</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="location">Exact Location</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="issue">Describe Your Issue</label>
+                    <textarea id="issue" name="issue" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+    </main>
+    <button id="back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px;">
+        ⬆ Back to Top
+    </button>
+
+    <footer>
+        <p>&copy; 2025 Women Safety & Empowerment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Security & Education Courses</title>
+    <link rel="stylesheet" href="online.css">
+</head>
+<body>
+
+<header>
+    <h1>Women's Security and Education Courses</h1>
+    <p>Empowering women through self-defense and education</p>
+</header>
+
+<section class="courses">
+    <h2>Our Featured Courses</h2>
+    <div class="course-list">
+        <!-- Self-Defense Course -->
+        <div class="course-card">
+            <img src="Screenshot 2025-03-06 091430.png" alt="Self Defense Course">
+            <h3>Self-Defense Training</h3>
+            <p>Learn self-defense techniques to protect yourself in any situation. Our course is designed for all skill levels.</p>
+            <button class="apply-btn">Enroll Now</button>
+        </div>
+        <!-- Educational Course -->
+        <div class="course-card">
+            <img src="ss2.png" alt="Educational Course">
+            <h3>Women's Empowerment Education</h3>
+            <p>Join our online education programs that focus on skills, leadership, and empowerment for women.</p>
+            <button class="apply-btn">Enroll Now</button>
+        </div>
+        <!-- Digital Literacy Course -->
+        <div class="course-card">
+            <img src="ss3.png" alt="Digital Literacy Course">
+            <h3>Digital Literacy for Women</h3>
+            <p>Gain essential digital skills with our course designed to help women become more tech-savvy and confident.</p>
+            <button class="apply-btn">Enroll Now</button>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="contact-form">
+        <h2>Get in Touch with Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="4" placeholder="Message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Women's Security & Education. All rights reserved.</p>
+</footer>
+
+<script>
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        alert(`Message sent!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+        // Optionally clear the form fields after submission
+        document.getElementById("contact-form").reset();
+    });
+</script>
+
+</body>
+</html>

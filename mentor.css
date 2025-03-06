@@ -1,0 +1,152 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;  
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.navbar .logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-right: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Optional: Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7; /* Light gray background */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Darken the shadow */
+}
+
+/* To darken the card further */
+.dark-card {
+    background-color: #333; /* Dark background */
+    color: white; /* White text color */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+/* Apply the dark-card class to your container */
+/* <div class="container dark-card">...</div> */
+
+
+.center-text {
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666; /* Darken the border color */
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #333; /* Darken the border on focus */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Enhance shadow on focus */
+}
+
+
+.btn {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1A252F;
+}
+
+footer {
+    background-color: #2C3E50;  
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+    }
+}

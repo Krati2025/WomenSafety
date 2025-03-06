@@ -1,0 +1,147 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d63384;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Courses Section */
+.courses {
+    padding: 40px 20px;
+}
+
+.courses h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Course Cards */
+.course-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.course-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.course-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Apply Button */
+.apply-btn {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.apply-btn:hover {
+    background-color: #b0206c;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact button:hover {
+    background-color: #b0206c;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.course-card img {
+    width: 100%;  /* Makes the image responsive */
+    height: 180px;  /* Ensures all images have the same height */
+    object-fit: cover;  /* Crops the image to fit without distortion */
+    border-radius: 8px;
+}
+
