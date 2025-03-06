@@ -55,4 +55,66 @@ document.getElementById('reportForm')?.addEventListener('submit', async (event) 
         console.error('Error:', error);
         alert('An error occurred. Please try again.');
     }
+    // Mentorship Registration Schema
+const mentorshipSchema = new mongoose.Schema({
+    name: { type: String, required: true }, // Full Name
+    email: { type: String, required: true }, // Email Address
+    interests: { type: String, required: true }, // Interests
+    goals: { type: String, required: true }, // Goals for Mentorship
+});
+
+// Create the Mentorship model
+const Mentorship = mongoose.model('Mentorship', mentorshipSchema);
+// API Endpoint to Handle Mentorship Registration
+app.post('/submit-mentorship-registration', async (req, res) => {
+    try {
+        console.log("Received Mentorship Data:", req.body); // Log incoming data
+
+        const { name, email, interests, goals } = req.body;
+
+        // Ensure all fields exist
+        if (!name || !email || !interests || !goals) {
+            return res.status(400).send("All fields are required.");
+        }
+
+        const newMentorship = new Mentorship({ name, email, interests, goals });
+
+        await newMentorship.save();
+        console.log("Mentorship Data saved to MongoDB:", newMentorship); // Log successful save
+
+        res.status(201).send("Mentorship registration submitted successfully!");
+    } catch (error) {
+        console.error("Error submitting mentorship registration:", error);
+        res.status(500).send("Error submitting mentorship registration.");
+    }
+});
+document.getElementById('registrationForm').addEventListener('submit', async function (event) {
+    event.preventDefault();  
+
+    const formData = new FormData(this);
+
+    try {
+        const response = await fetch('/submit-mentorship-registration', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: formData.get('name'),
+                email: formData.get('email'),
+                interests: formData.get('interests'),
+                goals: formData.get('goals'),
+            }),
+        });
+
+        const result = await response.text(); 
+        alert(result);  
+        this.reset();  
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
+});
+
+
 });

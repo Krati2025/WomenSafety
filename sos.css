@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f2f0f1; /* Off-white background for the whole page */
+    background-color: #f2f0f1; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,17 +12,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%;  
+    height: 100%;  
 }
 
 .sos-card {
-    background-color: #fff; /* White background for card */
+    background-color: #fff;  
     border-radius: 15px;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
-    width: 400px; /* Adjusted card width */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); / 
+    width: 400px;  
     transition: transform 0.2s ease-in-out;
 }
 
@@ -56,11 +56,11 @@ p {
 }
 
 .sos-button {
-    background-color: #f26b61; /* Red color */
+    background-color: #f26b61;  
     color: white;
     border: none;
     padding: 12px 24px;
-    border-radius: 8px; /* Rounded corners */
+    border-radius: 8px;  
     cursor: pointer;
     font-size: 1.1em;
     font-weight: bold;
